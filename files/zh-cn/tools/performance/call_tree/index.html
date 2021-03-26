@@ -35,7 +35,7 @@ translation_of: Tools/Performance/Call_Tree
 
 <p><font><font>在当前版本的调用树中，这些是最重要的列。</font><font>具有较高</font></font><em><font><font>自身成本的</font></font></em><font><font>函数</font><font>是优化的好选择，或者是因为它们需要很长时间才能运行，或者因为它们经常被调用。</font></font></p>
 
-<p><font><font>这个屏幕截图告诉我们一些我们可能已经知道的事情：泡泡排序是一种非常低效的算法。</font><font>泡沫分类中的样本数大约是选择排序中的六倍，是快速排序中的13倍。</font></font></p>
+<p><font><font>这个屏幕截图告诉我们一些我们可能已经知道的事情：冒泡排序是一种非常低效的算法。</font><font>泡沫分类中的样本数大约是选择排序中的六倍，是快速排序中的13倍。</font></font></p>
 
 <h2 id="走上调用树"><font><font>走上</font></font><font><font>调用树</font></font></h2>
 
@@ -57,7 +57,7 @@ translation_of: Tools/Performance/Call_Tree
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10985/perf-call-tree-expanded-sawp.png" style="display: block; height: 636px; margin-left: auto; margin-right: auto; width: 1052px;"></p>
 
-<p><font><font>里面有253个样本</font></font><code>swap()</code><font><font>。</font><font>但是</font></font><code>swap()</code><font><font>通过两种不同的途径达成了：两者</font></font><code>bubbleSort()</code><font><font>并</font></font><code>selectionSort()</code><font><font>使用它们。</font><font>我们还可以看到253个样本中</font></font><code>swap() </code><font><font>有</font><font>252个</font><font>在</font></font><code>bubbleSort()</code><font><font>分支中，只有一个在</font></font><code>selectionSort()</code><font><font>分支中。</font></font></p>
+<p><font><font>里面有253个样本</font></font><code>swap()</code><font><font>。</font><font>但是</font></font><code>swap()</code><font><font>通过两种不同的途径达成了：两者</font></font><code>bubbleSort()</code><font><font>和</font></font><code>selectionSort()</code><font><font>使用它们。</font><font>我们还可以看到253个样本中</font></font><code>swap() </code><font><font>有</font><font>252个</font><font>在</font></font><code>bubbleSort()</code><font><font>分支中，只有一个在</font></font><code>selectionSort()</code><font><font>分支中。</font></font></p>
 
 <p><font><font>这个结果意味着冒泡排序比我们想象的效率更低！</font><font>它可以承担另外252个样本的责任，或几乎占总成本的10％。</font></font></p>
 
